@@ -54,9 +54,7 @@ def gen_prime(bits, s):
 
 So all it boils down to is finding the s value of both the primes and we can break the modulus and hence the RSA. From the generation function, we can write the equation of the primes as:
 
-$$
-P = s .{2^{960}} + (as \mod {2^{64}})*2^{896} + ...... + (a^{14}s \mod 2^{64})*2^{64} + (a^{15}s \mod 2^{64})
-$$
+![formula](https://render.githubusercontent.com/render/math?math=P = s .{2^{960}} + (as \mod {2^{64}})*2^{896} + ...... + (a^{14}s \mod 2^{64})*2^{64} + (a^{15}s \mod 2^{64}))
 
 So if we can get the s values for both of the primes, we can break the encryption!. Let the primes be $p$ and $q$ and let the s values for them be $s_1$ and $s_2$ respectively.
 
