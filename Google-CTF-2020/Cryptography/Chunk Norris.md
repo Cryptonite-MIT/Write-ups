@@ -58,7 +58,7 @@ So all it boils down to is finding the s value of both the primes and we can bre
 
 So if we can get the s values for both of the primes, we can break the encryption!. Let the primes be <img src="https://render.githubusercontent.com/render/math?math=p"> and <img src="https://render.githubusercontent.com/render/math?math=q"> and let the s values for them be <img src="https://render.githubusercontent.com/render/math?math=s_1"> and <img src="https://render.githubusercontent.com/render/math?math=s_2"> respectively.
 
-If we look at the equation for $n$, we can see the 64 MSB bits will be a result of the multiplication of the first term's MSB bits. Similarly the 64 LSB bits will be the result of the product last term's LSB bits. Using these two relation we can basically get the value of $s_1 * s_2$ and then it's just a matter of bruteforcing over it's divisors.
+If we look at the equation for <img src="https://render.githubusercontent.com/render/math?math=n">, we can see the 64 MSB bits will be a result of the multiplication of the first term's MSB bits. Similarly the 64 LSB bits will be the result of the product last term's LSB bits. Using these two relation we can basically get the value of <img src="https://render.githubusercontent.com/render/math?math=s_1 * s_2"> and then it's just a matter of bruteforcing over it's divisors.
 
 <img src="https://render.githubusercontent.com/render/math?math=64 LSB \ bits \equiv [(a^{15}s_1 \mod  2^{64})*(a^{15}s_2 \mod 2^{64}) ]\mod 2^{64} \equiv a^{30}s_1s_2 \mod 2^{64}">
 
