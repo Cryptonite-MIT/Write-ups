@@ -1,0 +1,9 @@
+.directory
+.vscode
+__pycache__
+.DS_Store
+node_modules
+.vercel*
+venv
+.idea
+
