@@ -17,6 +17,6 @@ https://github.com/TejveerSingh13/Image-Steganography </br>
 
 The link contains a README file which has a youtube link along with written instructions as to how to use the attached python files that contain the actual working code for the Huffman Encoding and Compression algorithm. </br>
 
-On using the enc_data.pkl file along with the decode option in the histo-shift.py code, we get a text file with a bunch of binary numbers. Now this text file and the tempo.pkl file need to be used in the huffman.py code which gives another text file that contains the decoded flag.
+On using the enc.png file and enc_data.pkl along with the decode option in the histo-shift.py code, we get a text file with a bunch of binary numbers. Now this text file and the tempo.pkl file need to be used in the huffman.py code which gives another text file that contains the decoded flag.
 
 **FLAG: bitsctf{s73g4n06r4phy_15_n07_45_345y_45_17_533m5}**
