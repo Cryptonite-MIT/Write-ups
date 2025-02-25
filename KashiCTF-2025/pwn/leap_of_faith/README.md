@@ -50,7 +50,7 @@ void win(int param_1,int param_2,int param_3)
 
 As you may notice we can simply jump to the line where it opens the flag and skip the argument check, the address for that is `0x4011ba`
 
-However when we do this on nc, we get nothing, The issue lies with fgets, which reads the content of file stream into an local variable, probably due to some stack alignment issue.
+However when we do this on nc, we get nothing, The issue lies with fgets, which reads the content of file stream into an local variable, probably due to some stack size issue because the flag size might override the return address.
 To remedy that we notice in the disassembly of main
 
 ```asm
@@ -75,7 +75,7 @@ To remedy that we notice in the disassembly of main
 
 we can jump to `0x40125e` where it does `sub rsp,0x10` and continue executing the instructions till it asks for an address to jump to again.
 
-This could be used to fix the stack alignment issue by adjust the rsp.
+This could be used to increase the stack size for the flag to fit.
 By making a script which bruteforces the number of times we might have to jump to `0x40125e` instruction and finally jump to `0x4011ba` to get the flag
 
 [The solve script](solve.py)
